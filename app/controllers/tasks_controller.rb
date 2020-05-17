@@ -23,7 +23,7 @@ class TasksController < ApplicationController
     else
       @tasks = current_user.tasks
       flash.now[:danger] = 'Task が作成されませんでした'
-      render 'toppages/index'
+      render :new
     end
   end
   
